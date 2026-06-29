@@ -14,6 +14,78 @@ export type Database = {
   }
   public: {
     Tables: {
+      books: {
+        Row: {
+          author: string | null
+          cover_url: string | null
+          created_at: string
+          created_by: string | null
+          description: string | null
+          download_count: number
+          file_size_bytes: number | null
+          id: string
+          is_published: boolean
+          page_count: number | null
+          pdf_path: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          author?: string | null
+          cover_url?: string | null
+          created_at?: string
+          created_by?: string | null
+          description?: string | null
+          download_count?: number
+          file_size_bytes?: number | null
+          id?: string
+          is_published?: boolean
+          page_count?: number | null
+          pdf_path: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          author?: string | null
+          cover_url?: string | null
+          created_at?: string
+          created_by?: string | null
+          description?: string | null
+          download_count?: number
+          file_size_bytes?: number | null
+          id?: string
+          is_published?: boolean
+          page_count?: number | null
+          pdf_path?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      chat_messages: {
+        Row: {
+          content: string
+          created_at: string
+          id: string
+          role: string
+          user_id: string
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          id?: string
+          role: string
+          user_id: string
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          id?: string
+          role?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       choices: {
         Row: {
           choice_text: string
