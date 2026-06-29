@@ -42,7 +42,7 @@ const values = [
 ];
 
 const team = [
-  { name: "Math Go jamoasi", role: "Dasturchilar & Dizaynerlar", desc: "Zamonaviy texnologiyalar yordamida eng qulay va samarali o'quv platformasini yaratish ustida ishlaymiz." },
+  { name: "MATH GO jamoasi", role: "Dasturchilar & Dizaynerlar", desc: "Zamonaviy texnologiyalar yordamida eng qulay va samarali o'quv platformasini yaratish ustida ishlaymiz." },
   { name: "AI tizimi", role: "Sun'iy intellekt", desc: "Gemini Pro modeli yordamida PDF hujjatlardan avtomatik test yaratish va tahlil qilish imkoniyati." },
 ];
 
@@ -56,7 +56,7 @@ export default function About() {
             Biz <span className="text-primary">haqimizda</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Math Go — O'zbekiston talabalari uchun yaratilgan zamonaviy online test platformasi. 
+            MATH GO — O'zbekiston talabalari uchun yaratilgan zamonaviy online test platformasi. 
             Universitetga kirish imtihonlariga tayyorgarlik ko'rishning eng samarali yo'li.
           </p>
         </section>
@@ -81,7 +81,7 @@ export default function About() {
           <h2 className="text-2xl font-serif font-bold text-foreground">Bizning maqsadimiz</h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
             Biz har bir talabaga sifatli ta'lim resurslariga teng kirish imkoniyatini yaratishni maqsad qilganmiz. 
-            Math Go platformasi orqali siz 9 ta fandan minglab savollar bilan mashq qilishingiz, 
+            MATH GO platformasi orqali siz 9 ta fandan minglab savollar bilan mashq qilishingiz, 
             bilimingizni sinovdan o'tkazishingiz va o'z natijalaringizni reyting tizimida kuzatishingiz mumkin.
           </p>
           <p className="text-muted-foreground leading-relaxed">

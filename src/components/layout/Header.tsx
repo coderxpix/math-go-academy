@@ -60,9 +60,9 @@ export function Header() {
       <div className="container flex h-16 md:h-20 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <img src={logoImg} alt="Math Go Logo" className="h-9 w-9 md:h-11 md:w-11 rounded-md shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-transform duration-300 group-hover:scale-105" />
+          <img src={logoImg} alt="MATH GO Logo" className="h-9 w-9 md:h-11 md:w-11 rounded-md shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-transform duration-300 group-hover:scale-105" />
           <div className="flex flex-col">
-            <span className="font-serif text-lg md:text-xl font-bold tracking-tight text-white">Math Go</span>
+            <span className="font-serif text-lg md:text-xl font-bold tracking-tight text-white">MATH GO</span>
           </div>
         </Link>
 
@@ -96,11 +96,11 @@ export function Header() {
               <div className="bg-black p-6 flex flex-col items-start gap-4 border-b border-white/10 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl -z-10" />
                 <div className="h-16 w-16 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.5)] bg-black flex items-center justify-center overflow-hidden border-2 border-[#1E1E1E]">
-                  <img src={logoImg} alt="Math Go Logo" className="h-full w-full object-cover" />
+                  <img src={logoImg} alt="MATH GO Logo" className="h-full w-full object-cover" />
                 </div>
                 <div className="flex flex-col gap-0.5 z-10">
-                  <span className="font-serif text-xl font-bold text-white">Math Go</span>
-                  <span className="text-sm font-medium text-white/80">Math is easy with Math Go</span>
+                  <span className="font-serif text-xl font-bold text-white">MATH GO</span>
+                  <span className="text-sm font-medium text-white/80">Math is easy with MATH GO</span>
                 </div>
               </div>
 

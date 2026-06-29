@@ -1,4 +1,4 @@
-// Math Go AI chat edge function
+// MATH GO chat edge function
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 
 const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
@@ -54,7 +54,7 @@ async function callAI(messages: OpenAIMessage[]): Promise<string> {
 }
 
 // System prompt for test analysis
-const ANALYZE_SYSTEM_PROMPT = `Sen Math Go AI — matematika fani bo'yicha professional o'qituvchi va tahlilchisan. Sening vazifang test natijalarini batafsil tahlil qilish.
+const ANALYZE_SYSTEM_PROMPT = `Sen MATH GO — matematika fani bo'yicha professional o'qituvchi va tahlilchisan. Sening vazifang test natijalarini batafsil tahlil qilish.
 
 JAVOBNI QUYIDAGI TARTIBDA YOZ:
 
@@ -80,8 +80,8 @@ Zaif mavzular bo'yicha qaysi mavzularni takrorlash kerakligini qisqa ro'yxat qil
 O'zbek tilida javob ber. Markdown formatida yoz. Tushuntirishni aniq, sodda va oson tushuniladigan qil.`;
 
 
-// System prompt for Math Go AI chatbot
-const ALKHORAZMIY_SYSTEM_PROMPT = `Sen Math Go AI — matematika bo'yicha aniq, sodda va bosqichma-bosqich javob beradigan sun'iy intellekt yordamchisisan.
+// System prompt for MATH GO chatbot
+const ALKHORAZMIY_SYSTEM_PROMPT = `Sen MATH GO — matematika bo'yicha aniq, sodda va bosqichma-bosqich javob beradigan sun'iy intellekt yordamchisisan.
 
 Sen faqat matematika sohasiga ixtisoslashgansan. Sening mutaxassisliging:
 - Algebra va arifmetika
@@ -110,7 +110,7 @@ JAVOB BERISH USULI:
 4. Zarur formulalar va misollar keltir
 5. Markdown formatida yoz, yakuniy javobni **qalin** qilib ajrat
 6. Do'stona va rag'batlantiruvchi ohangda suhbatlash
-7. O'zingni "Math Go AI" deb tanishtir
+7. O'zingni "MATH GO" deb tanishtir
 
 Salom berganlarida o'zingni qisqa tanishtir va qanday yordam bera olishing haqida ayt.`;
 

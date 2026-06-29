@@ -82,7 +82,7 @@ export default function Register() {
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
               <BookOpen className="h-5 w-5" />
             </div>
-            <span className="gradient-text">Math Go</span>
+            <span className="gradient-text">MATH GO</span>
           </Link>
           <CardTitle className="font-serif text-2xl">Ro'yxatdan o'tish</CardTitle>
           <CardDescription>

@@ -16,7 +16,7 @@ const WELCOME_MESSAGE: Message = {
   id: 'welcome',
   role: 'assistant',
   content:
-    "Assalomu alaykum! Men **Math Go AI** — matematika bo'yicha AI yordamchingiz. Algebra, geometriya, trigonometriya yoki statistika haqida so'rang! 📐",
+    "Assalomu alaykum! Men **MATH GO** — matematika bo'yicha AI yordamchingiz. Algebra, geometriya, trigonometriya yoki statistika haqida so'rang! 📐",
   timestamp: new Date(),
 };
 
@@ -185,7 +185,7 @@ export function AlKhorazmiyChat() {
             ? 'h-14 w-14 bg-gradient-to-br from-red-500 to-red-600 rotate-0 hover:from-red-600 hover:to-red-700'
             : 'h-16 w-16 bg-gradient-to-br from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 hover:scale-110 chat-fab-pulse'
         )}
-        aria-label={isOpen ? 'Chatni yopish' : 'Math Go AI bilan suhbatlashish'}
+        aria-label={isOpen ? 'Chatni yopish' : 'MATH GO bilan suhbatlashish'}
       >
         {isOpen ? (
           <X className="h-6 w-6 text-white" />
@@ -214,7 +214,7 @@ export function AlKhorazmiyChat() {
           </div>
           <div className="flex-1">
             <h3 className="text-white font-bold text-base leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Math Go AI
+              MATH GO
             </h3>
             <p className="text-emerald-100 text-xs">Matematik AI yordamchi</p>
           </div>

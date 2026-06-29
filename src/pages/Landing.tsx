@@ -52,7 +52,7 @@ export default function Landing() {
         <section className="relative min-h-[100vh] flex items-center overflow-hidden pt-10">
           {/* Vibrant 3D Background from Image 4 */}
           <div className="absolute inset-0 z-0">
-            <img src={mathGoBg} alt="Math Go Background" className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000" />
+            <img src={mathGoBg} alt="MATH GO Background" className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000" />
             <div className="absolute inset-0 bg-[#0A0D18]/80 dark:bg-[#0A0D18]/60 backdrop-blur-[1px]" />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0D18]/50 to-[#0A0D18]" />
           </div>
@@ -70,7 +70,7 @@ export default function Landing() {
               
               {/* Description */}
               <p className="text-xl md:text-2xl text-white/80 max-w-2xl mb-12 animate-fade-up leading-relaxed font-medium" style={{ animationDelay: '0.1s' }}>
-                Math Go bilan real imtihon sharoitida o'zingizni sinab ko'ring. 
+                MATH GO bilan real imtihon sharoitida o'zingizni sinab ko'ring. 
                 Minglab savollar, tez natijalar, va kosmik tajriba.
               </p>
 
@@ -117,7 +117,7 @@ export default function Landing() {
             <div className="text-center mb-16">
               <p className="text-sm font-medium tracking-widest text-accent uppercase mb-3 animate-fade-up">Imkoniyatlar</p>
               <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 animate-fade-up delay-100">
-                Nima uchun <span className="text-gradient-gold">Math Go</span>?
+                Nima uchun <span className="text-gradient-gold">MATH GO</span>?
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-up delay-200">
                 Eng zamonaviy texnologiyalar bilan qurilgan platforma sizga eng yaxshi natijalarni kafolatlaydi
@@ -173,11 +173,11 @@ export default function Landing() {
         <footer className="py-12 border-t bg-card/50 backdrop-blur-sm">
           <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3 font-serif text-xl font-bold">
-              <img src={logoImg} alt="Math Go Logo" className="h-10 w-10 rounded-xl" />
-              <span>Math Go</span>
+              <img src={logoImg} alt="MATH GO Logo" className="h-10 w-10 rounded-xl" />
+              <span>MATH GO</span>
             </div>
             <p className="text-muted-foreground">
-              © 2025 Math Go. Barcha huquqlar himoyalangan.
+              © 2025 MATH GO. Barcha huquqlar himoyalangan.
             </p>
           </div>
         </footer>

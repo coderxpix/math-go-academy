@@ -14,7 +14,7 @@ const contactInfo = [
 ];
 
 const faq = [
-  { q: "Platforma bepulmi?", a: "Ha, Math Go platformasi barcha foydalanuvchilar uchun mutlaqo bepul." },
+  { q: "Platforma bepulmi?", a: "Ha, MATH GO platformasi barcha foydalanuvchilar uchun mutlaqo bepul." },
   { q: "Qanday fanlardan testlar bor?", a: "Matematika, Fizika, Kimyo, Biologiya, Tarix, Ingliz tili, Rus tili, O'zbek tili va Informatika — jami 9 ta fan." },
   { q: "Test natijalarini qaerdan ko'raman?", a: "Testni yakunlaganingizdan so'ng natijalar sahifasida ball, to'g'ri/noto'g'ri javoblar ko'rsatiladi. Dashboard bo'limida esa barcha natijalaringiz saqlanadi." },
   { q: "PDF orqali test yaratsa bo'ladimi?", a: "Ha, admin foydalanuvchilar PDF fayl yuklash orqali AI yordamida avtomatik test yaratishi mumkin." },

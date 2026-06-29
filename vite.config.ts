@@ -22,8 +22,8 @@ export default defineConfig(({ mode }) => ({
       devOptions: { enabled: false },
       includeAssets: ["favicon.ico", "apple-touch-icon.png"],
       manifest: {
-        name: "Al-Xorazmiy — Matematika AI",
-        short_name: "Al-Xorazmiy",
+        name: "MATH GO",
+        short_name: "MATH GO",
         description:
           "Matematika bo'yicha AI yordamchi: trigonometriya, hosila, integral va testlar.",
         lang: "uz",

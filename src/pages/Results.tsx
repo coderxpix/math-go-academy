@@ -306,7 +306,7 @@ export default function Results() {
               <CardHeader>
                 <CardTitle className="font-serif text-xl flex items-center gap-2">
                   <Sparkles className="h-5 w-5 text-emerald-500" />
-                  AI Tahlil — Math Go AI
+                  AI Tahlil — MATH GO
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -493,7 +493,7 @@ export default function Results() {
                                 <MathContent className="text-sm">{question.solution_text}</MathContent>
                               ) : (
                                 <p className="text-sm text-muted-foreground">
-                                  Bu savol uchun admin tomonidan alohida yechim kiritilmagan. “Testni tahlil qilish” tugmasi orqali Math Go AI to'liq bosqichma-bosqich tahlil beradi.
+                                  Bu savol uchun admin tomonidan alohida yechim kiritilmagan. “Testni tahlil qilish” tugmasi orqali MATH GO to'liq bosqichma-bosqich tahlil beradi.
                                 </p>
                               )}
                             </div>
