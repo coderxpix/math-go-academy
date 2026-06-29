@@ -14,16 +14,362 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      choices: {
+        Row: {
+          choice_text: string
+          id: string
+          is_correct: boolean
+          order_index: number
+          question_id: string
+        }
+        Insert: {
+          choice_text: string
+          id?: string
+          is_correct?: boolean
+          order_index?: number
+          question_id: string
+        }
+        Update: {
+          choice_text?: string
+          id?: string
+          is_correct?: boolean
+          order_index?: number
+          question_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "choices_question_id_fkey"
+            columns: ["question_id"]
+            isOneToOne: false
+            referencedRelation: "questions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          full_name: string
+          id: string
+          is_blocked: boolean
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          full_name: string
+          id?: string
+          is_blocked?: boolean
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          full_name?: string
+          id?: string
+          is_blocked?: boolean
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      questions: {
+        Row: {
+          correct_answer: string | null
+          created_at: string
+          id: string
+          intermediate_steps: Json
+          order_index: number
+          question_text: string
+          solution_text: string | null
+          source: string | null
+          test_id: string
+          topic: string | null
+          topic_order: number | null
+        }
+        Insert: {
+          correct_answer?: string | null
+          created_at?: string
+          id?: string
+          intermediate_steps?: Json
+          order_index?: number
+          question_text: string
+          solution_text?: string | null
+          source?: string | null
+          test_id: string
+          topic?: string | null
+          topic_order?: number | null
+        }
+        Update: {
+          correct_answer?: string | null
+          created_at?: string
+          id?: string
+          intermediate_steps?: Json
+          order_index?: number
+          question_text?: string
+          solution_text?: string | null
+          source?: string | null
+          test_id?: string
+          topic?: string | null
+          topic_order?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "questions_test_id_fkey"
+            columns: ["test_id"]
+            isOneToOne: false
+            referencedRelation: "tests"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      test_attempts: {
+        Row: {
+          completed_at: string | null
+          grade: string | null
+          id: string
+          percentage: number | null
+          score: number | null
+          started_at: string
+          test_id: string
+          time_spent_seconds: number | null
+          total_questions: number | null
+          user_id: string
+        }
+        Insert: {
+          completed_at?: string | null
+          grade?: string | null
+          id?: string
+          percentage?: number | null
+          score?: number | null
+          started_at?: string
+          test_id: string
+          time_spent_seconds?: number | null
+          total_questions?: number | null
+          user_id: string
+        }
+        Update: {
+          completed_at?: string | null
+          grade?: string | null
+          id?: string
+          percentage?: number | null
+          score?: number | null
+          started_at?: string
+          test_id?: string
+          time_spent_seconds?: number | null
+          total_questions?: number | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "test_attempts_test_id_fkey"
+            columns: ["test_id"]
+            isOneToOne: false
+            referencedRelation: "tests"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      tests: {
+        Row: {
+          access_code: string | null
+          created_at: string
+          created_by: string | null
+          description: string | null
+          duration_minutes: number
+          id: string
+          is_locked: boolean | null
+          is_published: boolean
+          subject: Database["public"]["Enums"]["subject"]
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          access_code?: string | null
+          created_at?: string
+          created_by?: string | null
+          description?: string | null
+          duration_minutes?: number
+          id?: string
+          is_locked?: boolean | null
+          is_published?: boolean
+          subject: Database["public"]["Enums"]["subject"]
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          access_code?: string | null
+          created_at?: string
+          created_by?: string | null
+          description?: string | null
+          duration_minutes?: number
+          id?: string
+          is_locked?: boolean | null
+          is_published?: boolean
+          subject?: Database["public"]["Enums"]["subject"]
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      user_answers: {
+        Row: {
+          attempt_id: string
+          id: string
+          is_correct: boolean | null
+          question_id: string
+          selected_choice_id: string | null
+          text_answer: string | null
+        }
+        Insert: {
+          attempt_id: string
+          id?: string
+          is_correct?: boolean | null
+          question_id: string
+          selected_choice_id?: string | null
+          text_answer?: string | null
+        }
+        Update: {
+          attempt_id?: string
+          id?: string
+          is_correct?: boolean | null
+          question_id?: string
+          selected_choice_id?: string | null
+          text_answer?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_answers_attempt_id_fkey"
+            columns: ["attempt_id"]
+            isOneToOne: false
+            referencedRelation: "test_attempts"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "user_answers_question_id_fkey"
+            columns: ["question_id"]
+            isOneToOne: false
+            referencedRelation: "questions"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "user_answers_selected_choice_id_fkey"
+            columns: ["selected_choice_id"]
+            isOneToOne: false
+            referencedRelation: "choices"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      claim_super_admin: { Args: never; Returns: boolean }
+      ensure_profile: { Args: { _full_name?: string }; Returns: undefined }
+      get_attempt_review: { Args: { p_attempt_id: string }; Returns: Json }
+      get_leaderboard: {
+        Args: {
+          p_limit?: number
+          p_subject?: Database["public"]["Enums"]["subject"]
+        }
+        Returns: {
+          avatar_url: string
+          avg_score: number
+          full_name: string
+          tests_completed: number
+          total_score: number
+          user_id: string
+        }[]
+      }
+      get_platform_stats: {
+        Args: never
+        Returns: {
+          attempts: number
+          questions: number
+          tests: number
+          users: number
+        }[]
+      }
+      get_published_question_counts: {
+        Args: never
+        Returns: {
+          question_count: number
+          test_id: string
+        }[]
+      }
+      get_test_id_by_code: { Args: { p_code: string }; Returns: string }
+      get_test_questions: { Args: { p_test_id: string }; Returns: Json }
+      get_tests_admin: {
+        Args: never
+        Returns: {
+          access_code: string
+          description: string
+          duration_minutes: number
+          id: string
+          is_published: boolean
+          subject: Database["public"]["Enums"]["subject"]
+          title: string
+        }[]
+      }
+      get_user_role: {
+        Args: { _user_id: string }
+        Returns: Database["public"]["Enums"]["app_role"]
+      }
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
+      is_admin_or_super: { Args: { _user_id: string }; Returns: boolean }
+      submit_test_attempt: {
+        Args: { p_answers: Json; p_attempt_id: string; p_time_spent?: number }
+        Returns: Json
+      }
+      verify_test_access: {
+        Args: { p_code: string; p_test_id: string }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "super_admin" | "admin" | "user"
+      subject:
+        | "math"
+        | "physics"
+        | "english"
+        | "history"
+        | "russian"
+        | "uzbek"
+        | "chemistry"
+        | "biology"
+        | "informatics"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +496,19 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["super_admin", "admin", "user"],
+      subject: [
+        "math",
+        "physics",
+        "english",
+        "history",
+        "russian",
+        "uzbek",
+        "chemistry",
+        "biology",
+        "informatics",
+      ],
+    },
   },
 } as const
