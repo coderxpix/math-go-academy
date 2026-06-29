@@ -91,7 +91,7 @@ export function Header() {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="w-[85%] sm:w-80 p-0 flex flex-col bg-[#020120] border-r-0 shadow-2xl">
+            <SheetContent side="right" className="w-[85%] sm:w-80 p-0 flex flex-col bg-[#020120] border-l-0 shadow-2xl">
               {/* Sidebar Header */}
               <div className="bg-black p-6 flex flex-col items-start gap-4 border-b border-white/10 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl -z-10" />
