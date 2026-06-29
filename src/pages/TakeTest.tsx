@@ -139,7 +139,7 @@ export default function TakeTest() {
       .insert({
         user_id: user!.id,
         test_id: testId,
-        total_questions: sortedQuestions.length,
+        total_questions: shuffledQuestions.length,
       })
       .select()
       .single();
