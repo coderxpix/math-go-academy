@@ -115,13 +115,23 @@ export default function TakeTest() {
       return;
     }
 
-    // Sort choices by order_index
-    const sortedQuestions = questionsList.map((q) => ({
+    // Fisher-Yates shuffle helper
+    const shuffle = <T,>(arr: T[]): T[] => {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    };
+
+    // Shuffle questions and their choices each attempt
+    const shuffledQuestions = shuffle(questionsList).map((q) => ({
       ...q,
-      choices: [...q.choices].sort((a, b) => a.order_index - b.order_index),
+      choices: shuffle(q.choices),
     }));
 
-    setQuestions(sortedQuestions);
+    setQuestions(shuffledQuestions);
 
     // Create test attempt
     const { data: attemptData, error: attemptError } = await supabase
@@ -129,7 +139,7 @@ export default function TakeTest() {
       .insert({
         user_id: user!.id,
         test_id: testId,
-        total_questions: sortedQuestions.length,
+        total_questions: shuffledQuestions.length,
       })
       .select()
       .single();
