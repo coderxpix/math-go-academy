@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Home, Info, Mail, LayoutDashboard, User, BarChart2 } from 'lucide-react';
+import { Home, LayoutDashboard, User, BarChart2, HelpCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/hooks/useAuth';
 
@@ -8,8 +8,7 @@ export function BottomNav() {
 
   const navItems = [
     { to: '/', icon: Home, label: 'Home' },
-    { to: '/about', icon: Info, label: 'About' },
-    { to: '/contact', icon: Mail, label: 'Contact' },
+    { to: '/tests', icon: HelpCircle, label: 'Testlar' },
     ...(user ? [{ to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' }] : []),
     ...(user ? [{ to: '/profile', icon: User, label: 'Profile' }] : []),
     { to: '/leaderboard', icon: BarChart2, label: 'Reyting' },

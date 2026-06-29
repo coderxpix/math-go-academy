@@ -37,21 +37,15 @@ export function Header() {
 
   const navLinks = [
     { href: '/tests', label: 'Testlar' },
-    { href: '/books', label: 'Kitoblar' },
     { href: '/leaderboard', label: 'Reyting' },
     ...(user ? [{ href: '/dashboard', label: 'Dashboard' }] : []),
-    { href: '/about', label: 'Biz haqimizda' },
-    { href: '/contact', label: 'Aloqa' },
   ];
 
   const mobileNavLinks = [
     { href: '/', label: 'Home', icon: Home },
-    { href: '/about', label: 'About', icon: Info },
     ...(user ? [{ href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard }] : []),
     { href: '/leaderboard', label: 'Reyting', icon: BarChart2 },
     { href: '/tests', label: 'Tests', icon: HelpCircle },
-    { href: '/books', label: 'Books', icon: Book },
-    { href: '/contact', label: 'Contact', icon: Phone },
     ...(user ? [{ href: '/profile', label: 'Profile', icon: User }] : []),
   ];
 
@@ -206,14 +200,6 @@ export function Header() {
                         Profil
                       </Link>
                     </DropdownMenuItem>
-                    {isAdmin && (
-                      <DropdownMenuItem asChild>
-                        <Link to="/admin" className="flex items-center gap-2 cursor-pointer">
-                          <LayoutDashboard className="h-4 w-4" />
-                          Admin Panel
-                        </Link>
-                      </DropdownMenuItem>
-                    )}
                   </div>
                   <DropdownMenuSeparator />
                   <div className="p-1">

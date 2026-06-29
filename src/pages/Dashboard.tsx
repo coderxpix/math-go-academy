@@ -111,20 +111,7 @@ export default function Dashboard() {
             
             <div className="relative flex items-center justify-between">
               <div>
-                <div className="flex items-center gap-3 mb-4">
-                  {isSuperAdmin && (
-                    <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white text-sm font-medium">
-                      <Crown className="h-4 w-4" />
-                      Super Admin
-                    </div>
-                  )}
-                  {isAdmin && !isSuperAdmin && (
-                    <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">
-                      <Star className="h-4 w-4" />
-                      Admin
-                    </div>
-                  )}
-                </div>
+
                 <h1 className="font-display text-4xl font-bold mb-2">
                   Xush kelibsiz, {profile?.full_name?.split(' ')[0]}! 
                   <span className="ml-2">👋</span>
@@ -146,41 +133,6 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Admin Quick Access */}
-          {isAdmin && (
-            <Card className="mb-8 card-premium border-accent/30 bg-gradient-to-r from-accent/5 to-primary/5">
-              <CardContent className="flex items-center justify-between p-6">
-                <div className="flex items-center gap-4">
-                  <div className={cn(
-                    "p-4 rounded-2xl shadow-lg",
-                    isSuperAdmin 
-                      ? "bg-gradient-to-br from-amber-500 to-orange-600 text-white" 
-                      : "bg-primary/10"
-                  )}>
-                    {isSuperAdmin ? (
-                      <Crown className="h-8 w-8" />
-                    ) : (
-                      <LayoutDashboard className="h-8 w-8 text-primary" />
-                    )}
-                  </div>
-                  <div>
-                    <h3 className="font-display text-xl font-bold">
-                      {isSuperAdmin ? 'Super Admin Panel' : 'Admin Panel'}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Testlarni boshqarish, savollar qo'shish va statistikani ko'rish
-                    </p>
-                  </div>
-                </div>
-                <Link to="/admin">
-                  <Button variant="premium" size="lg">
-                    Panelga o'tish
-                    <ArrowRight className="h-5 w-5 ml-2" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-          )}
 
           {/* Stats Cards */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">

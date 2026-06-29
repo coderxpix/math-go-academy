@@ -18,10 +18,7 @@ import Leaderboard from "./pages/Leaderboard";
 import Profile from "./pages/Profile";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
 import Tests from "./pages/Tests";
-import Books from "./pages/Books";
 
 const queryClient = new QueryClient();
 
@@ -40,11 +37,8 @@ const App = () => (
               <Route path="/subjects" element={<Tests />} />
               <Route path="/subjects/:subjectId" element={<Tests />} />
               <Route path="/tests" element={<Tests />} />
-              <Route path="/books" element={<Books />} />
               <Route path="/leaderboard" element={<Leaderboard />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              
+
               <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
               <Route path="/test/:testId" element={<ProtectedRoute><TakeTest /></ProtectedRoute>} />
               <Route path="/results/:attemptId" element={<ProtectedRoute><Results /></ProtectedRoute>} />
