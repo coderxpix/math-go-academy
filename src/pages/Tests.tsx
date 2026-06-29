@@ -51,6 +51,11 @@ export default function Tests() {
           ...t,
           question_count: countMap.get(t.id) || 0,
         }));
+        // Variantlarni random tartibda ko'rsatish
+        for (let i = withCounts.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [withCounts[i], withCounts[j]] = [withCounts[j], withCounts[i]];
+        }
         setTests(withCounts);
       }
       setLoading(false);
