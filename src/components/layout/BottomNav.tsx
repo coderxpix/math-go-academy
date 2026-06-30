@@ -15,7 +15,7 @@ export function BottomNav() {
   ];
 
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 bg-[#020120] border-t border-white/10 z-50 pb-safe shadow-[0_-10px_40px_rgba(0,0,0,0.3)] transition-all duration-500">
+    <div className="md:hidden fixed bottom-0 left-0 right-0 bg-[#E6E1DC] dark:bg-[#00003C] border-t border-black/10 dark:border-white/10 z-50 pb-safe shadow-[0_-10px_40px_rgba(0,0,0,0.1)] dark:shadow-[0_-10px_40px_rgba(0,0,0,0.3)] transition-all duration-500">
       <div className="flex items-center justify-around px-2 py-2 relative">
         {navItems.map((item) => (
           <NavLink
@@ -25,8 +25,8 @@ export function BottomNav() {
               cn(
                 "flex flex-col items-center justify-center gap-1 w-14 h-14 rounded-2xl transition-all duration-500 relative group",
                 isActive 
-                  ? "text-white" 
-                  : "text-white/60 hover:text-white"
+                  ? "text-[#00003C] dark:text-white" 
+                  : "text-gray-600 dark:text-white/60 hover:text-[#00003C] dark:hover:text-white"
               )
             }
           >
@@ -50,7 +50,7 @@ export function BottomNav() {
                   {/* Label */}
                   <span className={cn(
                     "text-[10px] sm:text-[11px] font-medium tracking-wide transition-all duration-500",
-                    isActive ? "text-white font-bold" : "text-white/60"
+                    isActive ? "text-[#00003C] dark:text-white font-bold" : "text-gray-600 dark:text-white/60"
                   )}>
                     {item.label}
                   </span>

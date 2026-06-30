@@ -50,13 +50,13 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#020120] border-b border-white/10 transition-all duration-300">
+    <header className="sticky top-0 z-50 w-full bg-[#E6E1DC] dark:bg-[#00003C] border-b border-black/10 dark:border-white/10 transition-all duration-300">
       <div className="container flex h-16 md:h-20 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
           <img src={logoImg} alt="MATH GO Logo" className="h-9 w-9 md:h-11 md:w-11 rounded-md shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-transform duration-300 group-hover:scale-105" />
           <div className="flex flex-col">
-            <span className="font-serif text-lg md:text-xl font-bold tracking-tight text-white">MATH GO</span>
+            <span className="font-serif text-lg md:text-xl font-bold tracking-tight text-[#00003C] dark:text-white">MATH GO</span>
           </div>
         </Link>
 
@@ -64,7 +64,7 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
             <Link key={link.href} to={link.href}>
-              <Button variant="ghost" size="sm" className="text-white/80 hover:text-white hover:bg-white/10 transition-colors">
+              <Button variant="ghost" size="sm" className="text-gray-700 dark:text-white/80 hover:text-[#00003C] dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
                 {link.label}
               </Button>
             </Link>
@@ -81,20 +81,20 @@ export function Header() {
           {/* Mobile Menu */}
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
+              <Button variant="ghost" size="icon" className="text-[#00003C] dark:text-white hover:bg-black/5 dark:hover:bg-white/10">
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[85%] sm:w-80 p-0 flex flex-col bg-[#020120] border-l-0 shadow-2xl">
+            <SheetContent side="right" className="w-[85%] sm:w-80 p-0 flex flex-col bg-[#E6E1DC] dark:bg-[#00003C] border-l-0 shadow-2xl">
               {/* Sidebar Header */}
-              <div className="bg-black p-6 flex flex-col items-start gap-4 border-b border-white/10 relative overflow-hidden">
+              <div className="bg-[#D9D3CE] dark:bg-black p-6 flex flex-col items-start gap-4 border-b border-black/10 dark:border-white/10 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl -z-10" />
                 <div className="h-16 w-16 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.5)] bg-black flex items-center justify-center overflow-hidden border-2 border-[#1E1E1E]">
                   <img src={logoImg} alt="MATH GO Logo" className="h-full w-full object-cover" />
                 </div>
                 <div className="flex flex-col gap-0.5 z-10">
-                  <span className="font-serif text-xl font-bold text-white">MATH GO</span>
-                  <span className="text-sm font-medium text-white/80">Math is easy with MATH GO</span>
+                  <span className="font-serif text-xl font-bold text-[#00003C] dark:text-white">MATH GO</span>
+                  <span className="text-sm font-medium text-gray-700 dark:text-white/80">Math is easy with MATH GO</span>
                 </div>
               </div>
 
@@ -110,8 +110,8 @@ export function Header() {
                       className={cn(
                         "flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 font-medium text-[15px] group relative overflow-hidden",
                         isActive
-                          ? "text-white bg-white/10"
-                          : "text-white/80 hover:bg-white/5 hover:text-white"
+                          ? "text-[#00003C] dark:text-white bg-black/10 dark:bg-white/10"
+                          : "text-gray-700 dark:text-white/80 hover:bg-black/5 dark:hover:bg-white/5 hover:text-[#00003C] dark:hover:text-white"
                       )}
                     >
                       {isActive && (
@@ -119,24 +119,24 @@ export function Header() {
                       )}
                       <div className={cn(
                         "flex items-center justify-center p-2 rounded-lg transition-colors",
-                        isActive ? "bg-white/20 shadow-sm" : "bg-transparent group-hover:bg-white/10"
+                        isActive ? "bg-black/20 dark:bg-white/20 shadow-sm" : "bg-transparent group-hover:bg-black/10 dark:group-hover:bg-white/10"
                       )}>
-                        <link.icon className={cn("h-5 w-5", isActive ? "text-white" : "text-white/70")} />
+                        <link.icon className={cn("h-5 w-5", isActive ? "text-[#00003C] dark:text-white" : "text-gray-600 dark:text-white/70")} />
                       </div>
                       <span className="translate-y-[1px]">{link.label}</span>
                     </Link>
                   );
                 })}
 
-                <div className="my-3 border-t border-white/10 mx-2"></div>
+                <div className="my-3 border-t border-black/10 dark:border-white/10 mx-2"></div>
 
                 {/* Theme Toggle inside Sidebar */}
-                <div className="flex items-center justify-between px-4 py-3 bg-white/5 rounded-xl mx-2 shadow-sm backdrop-blur-sm">
+                <div className="flex items-center justify-between px-4 py-3 bg-black/5 dark:bg-white/5 rounded-xl mx-2 shadow-sm backdrop-blur-sm">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 bg-white/10 rounded-lg">
+                    <div className="p-2 bg-black/10 dark:bg-white/10 rounded-lg">
                       <span className="text-xl leading-none block -translate-y-0.5">🌓</span>
                     </div>
-                    <span className="text-white font-semibold text-[14px]">Mavzu</span>
+                    <span className="text-[#00003C] dark:text-white font-semibold text-[14px]">Mavzu</span>
                   </div>
                   <ThemeToggle />
                 </div>
@@ -144,7 +144,7 @@ export function Header() {
                 {!user && (
                   <div className="mt-6 flex flex-col gap-3 px-2">
                     <Link to="/login" onClick={() => setMobileOpen(false)}>
-                      <Button variant="outline" className="w-full justify-start gap-3 border-white/20 text-white bg-transparent shadow-sm hover:bg-white/10 hover:text-white h-12 rounded-xl font-semibold"><User className="h-5 w-5" />Kirish</Button>
+                      <Button variant="outline" className="w-full justify-start gap-3 border-black/20 dark:border-white/20 text-[#00003C] dark:text-white bg-transparent shadow-sm hover:bg-black/10 dark:hover:bg-white/10 hover:text-[#00003C] dark:hover:text-white h-12 rounded-xl font-semibold"><User className="h-5 w-5" />Kirish</Button>
                     </Link>
                     <Link to="/register" onClick={() => setMobileOpen(false)}>
                       <Button variant="premium" className="w-full h-12 rounded-xl font-bold shadow-[0_4px_15px_rgba(0,0,0,0.1)]">Ro'yxatdan o'tish</Button>
@@ -169,15 +169,15 @@ export function Header() {
             {user ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="flex items-center gap-2 h-auto p-2 hover:bg-white/10 text-white">
-                    <Avatar className="h-9 w-9 border-2 border-white/20 transition-transform duration-300 hover:scale-105">
+                  <Button variant="ghost" className="flex items-center gap-2 h-auto p-2 hover:bg-black/5 dark:hover:bg-white/10 text-[#00003C] dark:text-white">
+                    <Avatar className="h-9 w-9 border-2 border-black/20 dark:border-white/20 transition-transform duration-300 hover:scale-105">
                       <AvatarImage src={profile?.avatar_url || ''} />
-                      <AvatarFallback className="bg-white/10 text-white font-medium text-sm">
+                      <AvatarFallback className="bg-black/10 dark:bg-white/10 text-[#00003C] dark:text-white font-medium text-sm">
                         {profile?.full_name ? getInitials(profile.full_name) : 'U'}
                       </AvatarFallback>
                     </Avatar>
                     <span className="hidden sm:block text-sm font-medium">{profile?.full_name?.split(' ')[0]}</span>
-                    <ChevronDown className="h-4 w-4 text-white/70" />
+                    <ChevronDown className="h-4 w-4 text-gray-700 dark:text-white/70" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-56 animate-fade-in" align="end">
@@ -213,7 +213,7 @@ export function Header() {
             ) : (
               <div className="flex items-center gap-3">
                 <Link to="/login">
-                  <Button variant="ghost" size="sm" className="text-white hover:bg-white/10">
+                  <Button variant="ghost" size="sm" className="text-[#00003C] dark:text-white hover:bg-black/5 dark:hover:bg-white/10">
                     Kirish
                   </Button>
                 </Link>

@@ -52,15 +52,14 @@ export default function Landing() {
         <section className="relative min-h-[100vh] flex items-center overflow-hidden pt-10">
           {/* Vibrant 3D Background from Image 4 */}
           <div className="absolute inset-0 z-0">
-            <img src={mathGoBg} alt="MATH GO Background" className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000" />
-            <div className="absolute inset-0 bg-[#0A0D18]/80 dark:bg-[#0A0D18]/60 backdrop-blur-[1px]" />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0D18]/50 to-[#0A0D18]" />
+            <div className="absolute inset-0 bg-background/80 backdrop-blur-[1px]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
           </div>
 
           <div className="container relative z-10 py-20">
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
               {/* Heading */}
-              <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 animate-fade-up text-white">
+              <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 animate-fade-up text-foreground">
                 Imtihonlarga 
                 <span className="block mt-2">
                   <span className="text-[#E2B714] drop-shadow-[0_0_15px_rgba(226,183,20,0.5)]">professional</span>
@@ -69,7 +68,7 @@ export default function Landing() {
               </h1>
               
               {/* Description */}
-              <p className="text-xl md:text-2xl text-white/80 max-w-2xl mb-12 animate-fade-up leading-relaxed font-medium" style={{ animationDelay: '0.1s' }}>
+              <p className="text-xl md:text-2xl text-foreground/80 max-w-2xl mb-12 animate-fade-up leading-relaxed font-medium" style={{ animationDelay: '0.1s' }}>
                 MATH GO bilan real imtihon sharoitida o'zingizni sinab ko'ring. 
                 Minglab savollar, tez natijalar, va kosmik tajriba.
               </p>
@@ -84,7 +83,7 @@ export default function Landing() {
                   </Button>
                 </Link>
                 <Link to="/subjects" className="w-full sm:w-auto">
-                  <Button variant="outline" size="xl" className="w-full border-2 border-white/20 bg-black/40 hover:bg-white/10 text-white backdrop-blur-md transition-all hover:scale-105 h-14 rounded-xl font-semibold text-lg">
+                  <Button variant="outline" size="xl" className="w-full border-2 border-border bg-background/40 hover:bg-muted text-foreground backdrop-blur-md transition-all hover:scale-105 h-14 rounded-xl font-semibold text-lg">
                     Fanlarni ko'rish
                   </Button>
                 </Link>
@@ -92,18 +91,18 @@ export default function Landing() {
 
               {/* Stats - Only two cards like in reference image */}
               <div className="flex flex-wrap justify-center gap-6 mt-16 animate-fade-up w-full" style={{ animationDelay: '0.3s' }}>
-                <div className="flex items-center gap-4 px-8 py-5 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)] w-full sm:w-auto">
+                <div className="flex items-center gap-4 px-8 py-5 rounded-2xl bg-card/60 backdrop-blur-md border border-border shadow-[0_8px_32px_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.3)] w-full sm:w-auto">
                   <Users className="h-8 w-8 text-[#E2B714]" />
                   <div className="text-left">
-                    <p className="font-serif text-3xl font-bold text-white">{stats?.users?.toLocaleString() ?? '0'}</p>
-                    <p className="text-sm text-white/70 font-medium">foydalanuvchi</p>
+                    <p className="font-serif text-3xl font-bold text-foreground">{stats?.users?.toLocaleString() ?? '0'}</p>
+                    <p className="text-sm text-foreground/70 font-medium">foydalanuvchi</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4 px-8 py-5 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)] w-full sm:w-auto">
+                <div className="flex items-center gap-4 px-8 py-5 rounded-2xl bg-card/60 backdrop-blur-md border border-border shadow-[0_8px_32px_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.3)] w-full sm:w-auto">
                   <BookOpen className="h-8 w-8 text-[#E2B714]" />
                   <div className="text-left">
-                    <p className="font-serif text-3xl font-bold text-white">{stats?.questions?.toLocaleString() ?? '0'}</p>
-                    <p className="text-sm text-white/70 font-medium">savollar</p>
+                    <p className="font-serif text-3xl font-bold text-foreground">{stats?.questions?.toLocaleString() ?? '0'}</p>
+                    <p className="text-sm text-foreground/70 font-medium">savollar</p>
                   </div>
                 </div>
               </div>
