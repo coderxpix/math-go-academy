@@ -50,7 +50,7 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#E6E1DC] dark:bg-[#00003C] border-b border-black/10 dark:border-white/10 transition-all duration-300">
+    <header className="fixed top-0 left-0 right-0 z-[100] w-full bg-[#E6E1DC] dark:bg-[#00003C] border-b border-black/10 dark:border-white/10 transition-all duration-300 shadow-sm">
       <div className="container flex h-16 md:h-20 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
