@@ -176,7 +176,7 @@ export default function Landing() {
               <span>MATH GO</span>
             </div>
             <p className="text-muted-foreground">
-              © 2025 MATH GO. Barcha huquqlar himoyalangan.
+              © 2026 MATH GO. Barcha huquqlar himoyalangan.
             </p>
           </div>
         </footer>
