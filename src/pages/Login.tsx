@@ -79,17 +79,22 @@ export default function Login() {
   const handleGoogleLogin = async () => {
     setLoading(true);
     setError('');
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: `${window.location.origin}/dashboard`,
-      },
+    const result = await lovable.auth.signInWithOAuth('google', {
+      redirect_uri: window.location.origin,
     });
-    
-    if (error) {
+
+    if (result.error) {
       setError('Google orqali kirishda xatolik yuz berdi');
       setLoading(false);
+      return;
     }
+
+    if (result.redirected) {
+      return;
+    }
+
+    toast.success('Muvaffaqiyatli kirdingiz!');
+    navigate(from, { replace: true });
   };
 
   return (
