@@ -10,7 +10,7 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   return (
-    <div className="min-h-screen bg-background relative flex flex-col">
+    <div className="min-h-screen bg-background relative flex flex-col w-full overflow-x-hidden">
       <FloatingShapes className="fixed z-0" />
       <Header />
       <main className="relative z-10 flex-1 pb-28 md:pb-0">{children}</main>

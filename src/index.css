@@ -144,6 +144,7 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
@@ -151,6 +152,7 @@
     font-family: 'Source Sans 3', system-ui, sans-serif;
     font-weight: 400;
     letter-spacing: 0.01em;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {

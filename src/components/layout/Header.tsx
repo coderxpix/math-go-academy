@@ -146,9 +146,6 @@ export function Header() {
                     <Link to="/login" onClick={() => setMobileOpen(false)}>
                       <Button variant="outline" className="w-full justify-start gap-3 border-black/20 dark:border-white/20 text-[#00003C] dark:text-white bg-transparent shadow-sm hover:bg-black/10 dark:hover:bg-white/10 hover:text-[#00003C] dark:hover:text-white h-12 rounded-xl font-semibold"><User className="h-5 w-5" />Kirish</Button>
                     </Link>
-                    <Link to="/register" onClick={() => setMobileOpen(false)}>
-                      <Button variant="premium" className="w-full h-12 rounded-xl font-bold shadow-[0_4px_15px_rgba(0,0,0,0.1)]">Ro'yxatdan o'tish</Button>
-                    </Link>
                   </div>
                 )}
 
@@ -215,11 +212,6 @@ export function Header() {
                 <Link to="/login">
                   <Button variant="ghost" size="sm" className="text-[#00003C] dark:text-white hover:bg-black/5 dark:hover:bg-white/10">
                     Kirish
-                  </Button>
-                </Link>
-                <Link to="/register">
-                  <Button className="bg-[#E2B714] text-[#1B2559] hover:bg-[#E2B714]/90 font-bold" size="sm">
-                    Ro'yxatdan o'tish
                   </Button>
                 </Link>
               </div>

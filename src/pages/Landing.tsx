@@ -75,7 +75,7 @@ export default function Landing() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-up w-full sm:w-auto mt-4" style={{ animationDelay: '0.2s' }}>
-                <Link to="/register" className="w-full sm:w-auto">
+                <Link to="/login" className="w-full sm:w-auto">
                   <Button size="xl" className="w-full group bg-[#E2B714] hover:bg-[#E2B714]/90 text-[#1B2559] text-lg font-bold shadow-[0_4px_20px_rgba(226,183,20,0.4)] transition-all hover:scale-105 border-none h-14 rounded-xl">
                     <Rocket className="h-5 w-5 mr-2 group-hover:-translate-y-1 transition-transform" />
                     Bepul boshlash
@@ -157,9 +157,9 @@ export default function Landing() {
                   Ro'yxatdan o'ting va birinchi testingizni bepul ishlang. 
                   Muvaffaqiyat yo'lida birinchi qadamni qo'ying.
                 </p>
-                <Link to="/register">
+                <Link to="/login">
                   <Button size="xl" variant="gold" className="font-bold text-lg hover:scale-105 transition-transform">
-                    Bepul ro'yxatdan o'tish
+                    Boshlash
                     <ArrowRight className="h-5 w-5 ml-2" />
                   </Button>
                 </Link>
