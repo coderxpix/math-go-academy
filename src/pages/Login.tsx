@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
+import { lovable } from '@/integrations/lovable';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -78,17 +79,22 @@ export default function Login() {
   const handleGoogleLogin = async () => {
     setLoading(true);
     setError('');
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: `${window.location.origin}/dashboard`,
-      },
+    const result = await lovable.auth.signInWithOAuth('google', {
+      redirect_uri: window.location.origin,
     });
-    
-    if (error) {
+
+    if (result.error) {
       setError('Google orqali kirishda xatolik yuz berdi');
       setLoading(false);
+      return;
     }
+
+    if (result.redirected) {
+      return;
+    }
+
+    toast.success('Muvaffaqiyatli kirdingiz!');
+    navigate(from, { replace: true });
   };
 
   return (
