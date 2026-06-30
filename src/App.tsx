@@ -31,6 +31,8 @@ const App = () => (
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <Header />
+            <div className="pt-16 md:pt-20">
             <Routes>
               <Route path="/" element={<Landing />} />
               <Route path="/login" element={<Login />} />
